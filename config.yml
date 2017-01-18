@@ -1,0 +1,64 @@
+game:
+  background_image: /public/images/background.png
+  time_steps: 30
+  start:
+    image: /public/images/start/image.png
+  intro:
+  middle:
+  end:
+  point_a:
+    label: Grade
+    translator: Need to set a function
+  point_b:
+    label: Friends
+    level_images:
+      - level_image: /public/images/point_b/image_1.jpg
+      - level_image: /public/images/point_b/image_2.jpg
+      - level_image: /public/images/point_b/image_3.jpg
+      - level_image: /public/images/point_b/image_4.jpg
+      - level_image: /public/images/point_b/image_5.jpg
+
+questions:
+  - text: Teacher fails you
+    options:
+      - type: 0
+        text: Kill teacher
+        branchs:
+          - weight: 1
+            point_a: -1000
+            point_b: -1
+          - weight: 1
+            point_a: 1000
+            point_b: -1
+
+      - type: 1
+        text: Don't kill teacher
+        branchs:
+          - weight: 1
+            point_a: -1000
+            point_b: -1
+          - weight: 1
+            point_a: 1000
+            point_b: -1
+
+  - text: Chemistry TA wants to sleep with you
+    options:
+      - type: 0
+        text: Kill teacher
+        branchs:
+          - weight: 1
+            point_a: -1000
+            point_b: -1
+          - weight: 1
+            point_a: 1000
+            point_b: -1
+
+      - type: 1
+        text: Don't kill teacher
+        branchs:
+          - weight: 1
+            point_a: -1000
+            point_b: -1
+          - weight: 1
+            point_a: 1000
+            point_b: -1

@@ -1,0 +1,75 @@
+game:
+  background_image: /public/images/background.png
+  time_steps: 30
+  start:
+    image: /public/images/start/image.png
+  intro:
+  middle:
+  end:
+  point_a:
+    label: Grade
+    translator: Need to set a function
+  point_b:
+    label: Friends
+    level_images:
+      - level_image: /public/images/point_b/image_1.jpg
+      - level_image: /public/images/point_b/image_2.jpg
+      - level_image: /public/images/point_b/image_3.jpg
+      - level_image: /public/images/point_b/image_4.jpg
+      - level_image: /public/images/point_b/image_5.jpg
+
+questions:
+  - text: School Year Started
+    weight: 10000000000
+    options:
+      - text: Cool!
+        point_a: 1000
+        point_b: 1
+  - text: Teacher fails you
+    weight: 1
+    options:
+      - text: Kill teacher
+        point_a: -1000
+        point_b: -1
+        questions:
+          - text: Teacher finds out about your plot and tries to kill you
+            weight: 1
+            options:
+              - text: Flee from school
+                point_a: -1000
+                point_b: -1
+              - text: Try to stick around
+                point_a: -1000
+                point_b: -1
+          - text: Teacher killed. Read it in the newspaper
+            weight: 1
+            options:
+              - text: Revisit the crime scene
+                point_a: -1000
+                point_b: -1
+              - text: Dont do anything
+                point_a: -1000
+                point_b: -1
+
+      - text: Don't kill teacher
+        point_a: -1000
+        point_b: -1
+        questions:
+          - text: You flunk out of the class and have to retake it to get a degree
+            weight: 1
+            options:
+              - text: Work hard to pass it this time
+                point_a: 1000
+                point_b: -1
+              - text: Try to sleep with the TA
+                point_a: 0
+                point_b: 1
+          - text: Somehow pass the class
+            weight: 1
+            options:
+              - text: Sweet!
+                point_a: 100
+                point_b: 0
+              - text: Good stuff!
+                point_a: 1000
+                point_b: 0
